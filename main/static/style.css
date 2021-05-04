@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  box-sizing: border-box;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  text-align: center;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  background: rgb(200, 200, 219);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 35%;
+  height: auto;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+small {
+  font-size: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+section {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  height: 100px;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+form {
+  position: relative;
+  /* top: 10px; */
+  width: 80%;
+  margin: auto;
+  padding: 0px 5px 0px;
+  z-index: 100;
+}
+
+input[type='text'] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+  margin: 30px 0;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.card .result {
+  background-color: #eff1f3;
+  margin-top: 5px;
+  text-align: left;
+  font-size: small;
+  width: 28%;
+  margin-left: 10px;
+  height: auto;
+}
+
+.item {
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+.item:nth-child(1) {
+  padding-top: 0px;
+}
+
+.item:hover {
+  text-decoration: underline;
+}

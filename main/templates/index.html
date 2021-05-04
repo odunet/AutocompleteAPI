@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>Flask | Noodle</title>
+	<link rel='stylesheet' type='text/css' href='{{ url_for("static", filename="style.css") }}'>
+	<script defer src='{{ url_for("static", filename="scripts.js") }}'></script>
+	</head>
+<body>
+	<main>
+		<h1>Welcome to Flask Autocomplete API<h1>
+		<h2>This is implemented using the Trie datastucture.<h2>
+		<img src="https://i.ibb.co/Csq3vKw/trie.png" alt="hero">
+		<p><small>Kindly acknowlegde use. &#169;<strong>Ayokunle</strong></small></p>
+		<section class="card">
+			<form>
+				<input id="inp" type="text" placeholder="Input Here">
+			</form>
+			<p id="result" class="card result" style="display: none;"></p>
+		</section>
+	</main>
+</body>
+</html>
