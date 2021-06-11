@@ -7,7 +7,7 @@ inp.addEventListener('keyup', async (e) => {
   result.innerHTML = '';
   let inpList = inp.value.split(' ');
   let data = await fetch(
-    `http://127.0.0.1:5000/api/${inpList[inpList.length - 1]}`
+    `${window.location.href}api/${inpList[inpList.length - 1]}`
   );
 
   let cleanData = await data.json();
