@@ -2,29 +2,29 @@
 from dotenv import load_dotenv
 from flask import Flask, url_for, render_template, redirect, request, jsonify
 import os
-from main import app
+from main import application
 # from main.triesDS import Tries
 # from main.triesData import data
 
 # Enable CORS
 from flask_cors import CORS, cross_origin
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(application)
+application.config['CORS_HEADERS'] = 'Content-Type'
 
 # load environment variables into module
 load_dotenv()
 
 # get secret key from environment
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+application.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 
-@app.route('/', methods=["GET"])
+@application.route('/', methods=["GET"])
 @cross_origin()
 def index():
     return render_template('index.html')
 
 
-@app.route('/api/<key>', methods=["GET"])
+@application.route('/api/<key>', methods=["GET"])
 @cross_origin()
 def search(key):
     """
@@ -49,7 +49,7 @@ def search(key):
         return "No key included"
     else:
         # perform auto search on the instance of Tries
-        result = app.data.autoSearch(key)
+        result = application.data.autoSearch(key)
 
         # Handle result of search and send to server.
         if result[0] == False:
