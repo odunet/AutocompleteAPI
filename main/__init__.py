@@ -3,13 +3,13 @@ from main.triesDB import initializeDS as db
 
 from main.config import configure_app
 
-application = Flask(__name__, instance_relative_config=True,
+app = Flask(__name__, instance_relative_config=True,
             static_folder='./static', template_folder='./templates')
 
-configure_app(application)
+configure_app(app)
 
 # Create an instance of the Tries class and append data
-application.data = db.retrieve()
+app.data = db.retrieve()
 
 from main import view
 
