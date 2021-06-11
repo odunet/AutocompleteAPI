@@ -1,4 +1,3 @@
-
 data = ["ayokunle", "oluwatosin", "tiwatope", "oluwaseun", "tiaraoluwa", "bose", "abosede", "damilola",
         "oluwakemi", "kemi", "tosin", "ayo", "aderonke", "ronke", "segun", "oluwasegun", "ayodeji", "folarin",
         "ianuoluwa", "titi", "titilayo", "shola", "gbemisola", "gbenga", "femi", "seyi", "folashade", "shade",

@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 from flask import Flask, url_for, render_template, redirect, request, jsonify
 import os
 from main import app
-from main.triesDS import Tries
-from main.triesData import data
+# from main.triesDS import Tries
+# from main.triesData import data
 
 # Enable CORS
 from flask_cors import CORS, cross_origin
@@ -48,12 +48,8 @@ def search(key):
     if not key:
         return "No key included"
     else:
-        # Create an instance of the Tries class and append data
-        # Note that in practise, the data in required structure will be handly for increased speed.
-        testTrie = Tries()
-        for i in range(len(data)):
-            testTrie[data[i]] = data[i]
-        result = testTrie.autoSearch(key)
+        # perform auto search on the instance of Tries
+        result = app.data.autoSearch(key)
 
         # Handle result of search and send to server.
         if result[0] == False:
